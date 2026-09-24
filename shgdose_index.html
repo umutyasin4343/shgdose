@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SHG Döner Sermaye - Kişiye özel kupa, sihirli kupa, fincan, DTF ve süblimasyon baskı, tişört, sweatshirt, matara, termos, puzzle, plaket, mousepad, magnet ve öğretmen önlüğü.">
+  <meta name="keywords" content="SHG Döner Sermaye, kişiye özel baskı, süblimasyon baskı, DTF baskı, kupa baskı, tişört baskı, sweatshirt baskı, Gediz baskı">
+  <meta name="author" content="SHG Döner Sermaye">
+  <meta name="theme-color" content="#111827">
+  <title>SHG Döner Sermaye | Kişiye Özel Baskı</title>
+
+  <style>
+    :root{
+      --bg:#f7f8fc; --card:#fff; --text:#111827; --muted:#64748b;
+      --dark:#111827; --accent:#2563eb; --accent2:#7c3aed;
+      --line:#e5e7eb; --shadow:0 18px 50px rgba(15,23,42,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+
+    header{
+      position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);
+      backdrop-filter:blur(14px);border-bottom:1px solid rgba(229,231,235,.8)
+    }
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .logo{font-size:1.25rem;font-weight:900;letter-spacing:-.5px}
+    .logo span{color:var(--accent)}
+    nav{display:flex;gap:25px;align-items:center}
+    nav a{font-weight:700;font-size:.94rem;color:#475569}
+    nav a:hover{color:var(--accent)}
+    .nav-btn{background:var(--dark);color:#fff!important;padding:10px 17px;border-radius:12px}
+    .menu{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer}
+
+    .hero{
+      min-height:650px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;
+      background:radial-gradient(circle at 20% 20%,#dbeafe 0,transparent 30%),
+                 radial-gradient(circle at 80% 30%,#ede9fe 0,transparent 28%),
+                 linear-gradient(135deg,#fff,#f1f5f9)
+    }
+    .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);opacity:.45}
+    .hero:before{width:260px;height:260px;background:#bfdbfe;right:-90px;bottom:-90px}
+    .hero:after{width:220px;height:220px;background:#ddd6fe;left:-80px;top:80px}
+    .hero-content{position:relative;z-index:2;max-width:850px;padding:70px 0}
+    .badge{display:inline-flex;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 25px rgba(15,23,42,.06);font-weight:800;font-size:.86rem;margin-bottom:20px}
+    h1{font-size:clamp(2.6rem,7vw,5.3rem);line-height:.98;letter-spacing:-4px;margin-bottom:24px}
+    h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:clamp(1rem,2vw,1.2rem);color:#64748b;max-width:700px;margin:0 auto 30px}
+    .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:13px;font-weight:800;transition:.2s;border:1px solid transparent}
+    .btn:hover{transform:translateY(-2px)}
+    .primary{background:var(--dark);color:#fff;box-shadow:0 10px 25px rgba(17,24,39,.18)}
+    .secondary{background:#fff;border-color:var(--line)}
+
+    section{padding:90px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+    .eyebrow{color:var(--accent);font-weight:900;text-transform:uppercase;font-size:.8rem;letter-spacing:1.5px}
+    h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-1.5px;margin:7px 0 10px}
+    .section-head p{color:var(--muted)}
+
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{background:var(--card);padding:28px;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+    .icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:#eff6ff;font-size:1.35rem;margin-bottom:16px}
+    .feature h3{margin-bottom:6px}.feature p{color:var(--muted);font-size:.95rem}
+
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+    .product{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:.2s}
+    .product:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#cbd5e1}
+    .product .emoji{font-size:2.2rem;margin-bottom:13px}
+    .product h3{font-size:1.05rem;margin-bottom:5px}
+    .product p{color:var(--muted);font-size:.88rem}
+
+    .price{display:block;font-size:1.08rem;color:#111827;margin-top:14px;font-weight:900}
+    .product .price + .price{margin-top:5px}
+    .tag{display:inline-block;margin-top:13px;font-size:.75rem;font-weight:800;color:var(--accent);background:#eff6ff;padding:5px 9px;border-radius:999px;width:max-content}
+
+    .custom{background:var(--dark);color:#fff;border-radius:30px;padding:60px;position:relative;overflow:hidden}
+    .custom:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;right:-100px;top:-140px;background:linear-gradient(135deg,#2563eb,#7c3aed);opacity:.6;filter:blur(10px)}
+    .custom-inner{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:40px}
+    .custom p{color:#cbd5e1;max-width:650px}
+    .custom .btn{background:#fff;color:#111827;white-space:nowrap}
+
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:stretch}
+    .about-card{background:#fff;border:1px solid var(--line);border-radius:25px;padding:35px}
+    .about-card p{color:var(--muted);margin-top:12px}
+    .list{list-style:none;margin-top:20px;display:grid;gap:12px}
+    .list li{display:flex;gap:10px;align-items:flex-start}
+    .check{color:#2563eb;font-weight:900}
+
+    .contact{background:#eef2ff}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .contact-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}
+    .contact-row{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line)}
+    .contact-row:last-child{border-bottom:0}
+    .contact-row strong{display:block}.contact-row span{color:var(--muted);font-size:.9rem}
+    .instagram{color:#7c3aed;font-weight:900}
+
+    footer{background:#0b1120;color:#cbd5e1;padding:45px 0 25px}
+    .footer-top{display:flex;justify-content:space-between;gap:25px;align-items:flex-start}
+    footer h3{color:#fff;margin-bottom:8px} footer p{max-width:500px}
+    .footer-bottom{border-top:1px solid #263044;margin-top:30px;padding-top:20px;font-size:.85rem;color:#94a3b8;display:flex;justify-content:space-between;gap:15px}
+
+    @media(max-width:850px){
+      nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;padding:18px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}
+      nav.open{display:flex}.menu{display:block}.nav-btn{text-align:center}
+      .features,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .products{grid-template-columns:repeat(2,1fr)}
+      .custom{padding:38px 25px}.custom-inner,.footer-top{flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:480px){.products{grid-template-columns:1fr}.hero{min-height:590px}h1{letter-spacing:-2px}.footer-bottom{flex-direction:column}}
+  
+    /* Kişiye özel tasarım editörü */
+    .product{cursor:pointer;position:relative}
+    .product::after{content:"Çift tıkla • Tasarla";position:absolute;top:10px;right:10px;font-size:.68rem;font-weight:800;background:#111827;color:#fff;padding:5px 8px;border-radius:999px;opacity:0;transform:translateY(-3px);transition:.2s}
+    .product:hover::after{opacity:1;transform:none}
+    .price{display:block;font-size:1.08rem;color:#111827;margin-top:14px;font-weight:900}
+    .design-modal{position:fixed;inset:0;background:rgba(2,6,23,.72);backdrop-filter:blur(7px);z-index:100;display:none;padding:18px;overflow:auto}
+    .design-modal.show{display:flex;align-items:center;justify-content:center}
+    .design-box{width:min(1180px,100%);max-height:95vh;overflow:auto;background:#f8fafc;border-radius:25px;box-shadow:0 30px 100px rgba(0,0,0,.35)}
+    .design-head{padding:18px 22px;background:#fff;border-bottom:1px solid #e5e7eb;display:flex;justify-content:space-between;align-items:center;gap:15px;position:sticky;top:0;z-index:3}
+    .design-head h2{font-size:1.35rem;margin:0;letter-spacing:-.5px}
+    .close-editor{border:0;background:#eef2f7;border-radius:12px;width:42px;height:42px;font-size:1.25rem;cursor:pointer}
+    .editor-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;padding:22px}
+    .preview-panel,.controls-panel{background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:20px}
+    .preview-title{font-weight:900;margin-bottom:14px}
+    .mockup-wrap{min-height:560px;background:linear-gradient(145deg,#e2e8f0,#f8fafc);border-radius:17px;display:grid;place-items:center;padding:25px;overflow:hidden}
+    .mockup{width:min(430px,90%);height:470px;position:relative;display:grid;place-items:center}
+    .mockup-body{position:absolute;width:70%;height:76%;background:#fff;border-radius:24px 24px 45px 45px;box-shadow:0 20px 35px rgba(15,23,42,.18);overflow:hidden}
+    .mockup-body::before,.mockup-body::after{content:"";position:absolute;top:18px;width:35%;height:90px;background:#e5e7eb;border-radius:50%;z-index:0}
+    .mockup-body::before{left:-20%}.mockup-body::after{right:-20%}
+    .mockup-print-area{position:absolute;left:18%;right:18%;top:18%;bottom:17%;border:1px dashed rgba(37,99,235,.55);border-radius:12px;z-index:1;overflow:hidden}
+    .design-image{position:absolute;left:50%;top:50%;width:48%;max-height:70%;object-fit:contain;transform:translate(-50%,-50%);cursor:move;user-select:none;z-index:2;display:none}
+    .design-text{position:absolute;left:50%;top:78%;transform:translate(-50%,-50%);font-weight:900;text-align:center;white-space:nowrap;cursor:move;z-index:3;display:none}
+    .print-guide{position:absolute;inset:0;display:grid;place-items:center;color:#94a3b8;font-size:.78rem;text-align:center;padding:20px;z-index:0}
+    .editor-note{font-size:.82rem;color:#64748b;margin-top:12px}
+    .control-group{border-bottom:1px solid #e5e7eb;padding:0 0 18px;margin-bottom:18px}
+    .control-group:last-child{border-bottom:0;margin-bottom:0}
+    .control-group h3{font-size:.95rem;margin-bottom:11px}
+    .file-label{display:flex;align-items:center;justify-content:center;gap:8px;border:1.5px dashed #94a3b8;border-radius:13px;padding:13px;cursor:pointer;font-weight:800;background:#f8fafc}
+    .file-label:hover{border-color:#2563eb;background:#eff6ff}
+    input[type=file]{display:none}
+    .text-input{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:11px;outline:none}
+    .text-input:focus{border-color:#2563eb;box-shadow:0 0 0 3px #dbeafe}
+    .range-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin-top:10px}
+    input[type=range]{width:100%;accent-color:#2563eb}
+    .range-value{font-size:.8rem;font-weight:800;color:#475569;min-width:42px;text-align:right}
+    .select-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .select-row select,.select-row input[type=color]{width:100%;height:43px;border:1px solid #cbd5e1;border-radius:11px;background:#fff;padding:0 9px}
+    .action-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+    .editor-btn{border:0;border-radius:12px;padding:12px 13px;font-weight:900;cursor:pointer}
+    .editor-primary{background:#111827;color:#fff}.editor-secondary{background:#eef2f7;color:#111827}
+    .order-box{background:#eff6ff;border:1px solid #bfdbfe;border-radius:14px;padding:13px;margin-top:15px;font-size:.83rem;color:#1e3a8a}
+    .drag-tip{font-size:.75rem;color:#64748b;margin-top:8px}
+    @media(max-width:850px){
+      .editor-layout{grid-template-columns:1fr}.mockup-wrap{min-height:430px}.mockup{height:380px}
+    }
+
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#anasayfa">SHG <span>DÖNER SERMAYE</span></a>
+    <button class="menu" onclick="toggleMenu()" aria-label="Menüyü aç">☰</button>
+    <nav id="nav">
+      <a href="#anasayfa">Ana Sayfa</a>
+      <a href="#urunler">Ürünler</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#iletisim">İletişim</a>
+      <a class="nav-btn" href="#iletisim">Teklif Al</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="anasayfa">
+    <div class="container hero-content">
+      <div class="badge">🎨 Kişiye Özel Baskı & Tasarım</div>
+      <h1>Hayalindeki tasarım<br><span>ürüne dönüşsün.</span></h1>
+      <p>SHG Döner Sermaye olarak fotoğraf, isim, yazı, logo ve özel tasarımlarınızı birbirinden farklı ürünlere uyguluyoruz.</p>
+      <div class="actions">
+        <a class="btn primary" href="#urunler">Ürünleri İncele →</a>
+        <a class="btn secondary" href="#iletisim">Teklif Al</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="features">
+        <div class="feature">
+          <div class="icon">✨</div>
+          <h3>Kişiye Özel Tasarım</h3>
+          <p>İsim, fotoğraf, yazı, logo veya size özel fikirleri ürünlerinize taşıyoruz.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">🖨️</div>
+          <h3>DTF & Süblimasyon</h3>
+          <p>Tekstil ve uygun ürünlerde ihtiyaca göre DTF veya süblimasyon baskı seçenekleri.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">🎁</div>
+          <h3>Özel Günler İçin</h3>
+          <p>Hediyeler, okul etkinlikleri, öğretmenler günü ve işletmelere özel baskı seçenekleri.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="urunler">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Ürünlerimiz</div>
+        <h2>Size özel, size ait.</h2>
+        <p>Beğendiğiniz ürünü seçin, tasarımınızı birlikte oluşturalım.</p>
+      </div>
+
+      <div class="products">
+        <article class="product" ondblclick="openDesigner(this)" data-product="Kupa" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">☕</div><h3>Kupa</h3><p>Kişiye özel fotoğraf, isim ve tasarım baskısı.</p></div><strong class="price">250 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Sihirli Kupa" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🌈</div><h3>Sihirli Kupa</h3><p>Isıyla tasarımı ortaya çıkan özel kupa.</p></div><strong class="price">350 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Türk Kahvesi Fincanı" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🍵</div><h3>Türk Kahvesi Fincanı</h3><p>Özel tasarımlarla kişiselleştirilebilir fincan.</p></div><strong class="price">250 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Nescafe Fincan Seti" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">☕</div><h3>Nescafe Fincan Seti</h3><p>Şık ve kişiye özel fincan seti.</p></div><strong class="price">550 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="T-Shirt — Süblimasyon" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">👕</div><h3>T-Shirt — Süblimasyon</h3><p>Tek baskı veya çift baskı seçenekleri.</p></div><div><strong class="price">Tek baskı: 350 TL</strong><strong class="price">Çift baskı: 450 TL</strong></div></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="T-Shirt — DTF" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">👕</div><h3>T-Shirt — DTF</h3><p>DTF baskı seçeneği.</p></div><strong class="price">750 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Sweatshirt" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🧥</div><h3>Sweatshirt</h3><p>DTF ve süblimasyon baskı seçenekleri.</p></div><span class="tag">Fiyat için teklif alın</span></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Termos" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🧊</div><h3>Termos</h3><p>Günlük kullanım ve hediye için özel tasarım.</p></div><strong class="price">650 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="800 ml Matara" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🥤</div><h3>800 ml Matara</h3><p>İsim, fotoğraf ve özel tasarım.</p></div><strong class="price">500 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Pipetli Matara 650 ml" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🥤</div><h3>Pipetli Matara 650 ml</h3><p>Özel tasarım baskı seçeneği.</p></div><strong class="price">450 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="600 ml Matara" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🥤</div><h3>600 ml Matara</h3><p>Kişiye özel tasarım.</p></div><strong class="price">350 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Kalpli Puzzle" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🧩</div><h3>Kalpli Puzzle</h3><p>Fotoğrafınızı özel puzzle tasarımına dönüştürün.</p></div><strong class="price">250 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Dikdörtgen Puzzle" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🧩</div><h3>Dikdörtgen Puzzle</h3><p>Hatıralarınızı puzzle üzerinde yaşatın.</p></div><span class="tag">Fiyat için teklif alın</span></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Plaket" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🏆</div><h3>Plaket</h3><p>Ödül, teşekkür ve özel günler için tasarımlar.</p></div><strong class="price">300 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Mousepad" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🖱️</div><h3>Mousepad</h3><p>Masaüstünüze özel görsel ve tasarımlar.</p></div><strong class="price">200 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Magnet" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">🧲</div><h3>Magnet</h3><p>Kişiye özel magnet. Birim fiyatıdır.</p></div><strong class="price">30 TL / adet</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Zıbın" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">👶</div><h3>Zıbın</h3><p>Bebekler için kişiye özel tasarım.</p></div><strong class="price">300 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Keten El Cüzdanı" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">👛</div><h3>Keten El Cüzdanı</h3><p>Şık ve kişiye özel tasarım.</p></div><strong class="price">250 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Bez Çanta" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">👜</div><h3>Bez Çanta</h3><p>Özel tasarımlarla kişiselleştirilebilir.</p></div><strong class="price">250 TL</strong></article>
+        <article class="product" ondblclick="openDesigner(this)" data-product="Öğretmen Önlüğü" title="Çift tıklayarak kişiye özel tasarla"><div><div class="emoji">👩‍🏫</div><h3>Öğretmen Önlüğü</h3><p>Öğretmenlere ve eğitim ortamlarına özel baskılar.</p></div><span class="tag">Fiyat için teklif alın</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="custom">
+        <div class="custom-inner">
+          <div>
+            <div class="eyebrow" style="color:#93c5fd">Tasarımını Getir</div>
+            <h2 style="margin-top:5px">Aklındaki fikir hazır mı?</h2>
+            <p>Fotoğrafını, logonu veya istediğin tasarımı bize gönder. Hangi ürüne ve hangi baskı yöntemine uygun olduğunu birlikte değerlendirelim.</p>
+          </div>
+          <a class="btn" href="#iletisim">İletişime Geç →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hakkimizda">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">SHG Döner Sermaye</div>
+        <h2>Üretim, tasarım ve kişiselleştirme.</h2>
+        <p>Farklı ihtiyaçlara uygun baskı ürünlerini tek bir yerde buluşturuyoruz.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Ne yapıyoruz?</h3>
+          <p>Kişiye özel baskı ve tasarım çalışmaları hazırlıyor; tekstil ürünlerinden hediyelik ürünlere kadar farklı seçeneklerde uygulamalar yapıyoruz.</p>
+          <ul class="list">
+            <li><span class="check">✓</span><span>Kişiye özel isim, fotoğraf ve yazı tasarımları</span></li>
+            <li><span class="check">✓</span><span>DTF ve süblimasyon baskı seçenekleri</span></li>
+            <li><span class="check">✓</span><span>Okul, etkinlik ve işletmelere özel çalışmalar</span></li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3>Neden SHG?</h3>
+          <p>Her siparişi yalnızca bir ürün olarak değil, kişiye özel bir çalışma olarak ele alıyoruz. İhtiyacınıza uygun ürün ve baskı yöntemini belirleyerek tasarım sürecini birlikte yürütüyoruz.</p>
+          <ul class="list">
+            <li><span class="check">✓</span><span>Özgün tasarım yaklaşımı</span></li>
+            <li><span class="check">✓</span><span>Farklı ürün seçenekleri</span></li>
+            <li><span class="check">✓</span><span>İletişim ve teklif odaklı çalışma</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="iletisim">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">İletişim</div>
+        <h2>Projenizi konuşalım.</h2>
+        <p>Ürün, tasarım veya toplu sipariş için bizimle iletişime geçebilirsiniz.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>📱 Bize Ulaşın</h3>
+          <div class="contact-row">
+            <div>📸</div>
+            <div><strong>Instagram</strong><span class="instagram">@shg_bilisim_teknolojileri_dose</span></div>
+          </div>
+          <div class="contact-row">
+            <div>💬</div>
+            <div><strong>Sipariş & Teklif</strong><span>Instagram üzerinden mesaj göndererek ürün ve tasarım hakkında bilgi alabilirsiniz.</span></div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3>🎨 Özel Tasarım İste</h3>
+          <p style="color:#64748b;margin:10px 0 20px">İstediğiniz ürünün adını ve mümkünse kullanmak istediğiniz görseli bize iletin. Tasarımınız için birlikte çalışalım.</p>
+          <a class="btn primary" href="https://www.instagram.com/shg_bilisim_teknolojileri_dose/" target="_blank" rel="noopener">Instagram'a Git →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<div class="design-modal" id="designModal" aria-hidden="true">
+  <div class="design-box">
+    <div class="design-head">
+      <div>
+        <div style="font-size:.75rem;color:#2563eb;font-weight:900;text-transform:uppercase;letter-spacing:1px">Kişiye Özel Tasarım</div>
+        <h2 id="designerTitle">Ürün Tasarımı</h2>
+      </div>
+      <button class="close-editor" onclick="closeDesigner()" aria-label="Kapat">✕</button>
+    </div>
+
+    <div class="editor-layout">
+      <div class="preview-panel">
+        <div class="preview-title">Canlı Önizleme</div>
+        <div class="mockup-wrap">
+          <div class="mockup" id="mockup">
+            <div class="mockup-body" id="mockupBody">
+              <div class="mockup-print-area" id="printArea">
+                <div class="print-guide" id="printGuide">Baskı alanı<br>Görselinizi buraya yerleştirin</div>
+                <img id="designImage" class="design-image" alt="Kişiye özel baskı önizlemesi">
+                <div id="designText" class="design-text"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="editor-note">Görseli ekledikten sonra önizlemedeki görseli fareyle sürükleyebilir, boyutunu sağdaki ayardan değiştirebilirsin.</div>
+      </div>
+
+      <div class="controls-panel">
+        <div class="control-group">
+          <h3>1. Görselini ekle</h3>
+          <label class="file-label">
+            🖼️ Görsel seç / yükle
+            <input type="file" id="designFile" accept="image/*" onchange="loadDesignImage(event)">
+          </label>
+          <div class="drag-tip">JPG, PNG veya WEBP kullanabilirsin.</div>
+        </div>
+
+        <div class="control-group">
+          <h3>2. Tasarımını ayarla</h3>
+          <div class="range-row">
+            <input type="range" id="imageSize" min="15" max="90" value="48" oninput="updateImageSize()">
+            <span class="range-value" id="sizeValue">48%</span>
+          </div>
+          <div class="range-row">
+            <input type="range" id="imageX" min="10" max="90" value="50" oninput="updateImagePosition()">
+            <span class="range-value" id="xValue">X 50</span>
+          </div>
+          <div class="range-row">
+            <input type="range" id="imageY" min="10" max="90" value="50" oninput="updateImagePosition()">
+            <span class="range-value" id="yValue">Y 50</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h3>3. Yazı ekle (isteğe bağlı)</h3>
+          <input class="text-input" id="customText" maxlength="50" placeholder="Örn. İyi ki varsın ❤️" oninput="updateText()">
+          <div class="range-row">
+            <input type="range" id="textSize" min="12" max="42" value="22" oninput="updateText()">
+            <span class="range-value" id="textSizeValue">22px</span>
+          </div>
+          <div class="select-row" style="margin-top:10px">
+            <select id="textFont" onchange="updateText()">
+              <option value="Arial">Arial</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Trebuchet MS">Trebuchet</option>
+              <option value="Courier New">Courier</option>
+            </select>
+            <input type="color" id="textColor" value="#111827" onchange="updateText()" title="Yazı rengi">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h3>4. Sipariş bilgisi</h3>
+          <input class="text-input" id="customerName" maxlength="50" placeholder="Adınız Soyadınız">
+          <input class="text-input" id="customerNote" maxlength="150" placeholder="Özel not / istediğiniz baskı yeri" style="margin-top:9px">
+          <div class="order-box">💡 Tasarımı hazırladıktan sonra <b>“Tasarımı Kaydet”</b> ile görseli bilgisayarına indirebilirsin. Bu dosya, sipariş hazırlanırken kullanılabilir.</div>
+        </div>
+
+        <div class="action-row">
+          <button class="editor-btn editor-secondary" onclick="resetDesigner()">↺ Sıfırla</button>
+          <button class="editor-btn editor-primary" onclick="saveDesign()">⬇ Tasarımı Kaydet</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <h3>SHG Döner Sermaye</h3>
+        <p>Kişiye özel baskı, tasarım ve ürün çözümleri.</p>
+      </div>
+      <div><strong>Instagram</strong><br>@shg_bilisim_teknolojileri_dose</div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SHG Döner Sermaye. Tüm hakları saklıdır.</span>
+      <span>Kişiye özel tasarımlar • DTF • Süblimasyon</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(){
+    document.getElementById('nav').classList.toggle('open');
+  }
+  document.querySelectorAll('#nav a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open'));
+  });
+
+  let currentProduct = "";
+  let uploadedImage = "";
+  let dragging = false;
+
+  function openDesigner(card){
+    currentProduct = card.dataset.product || "Ürün";
+    document.getElementById("designerTitle").textContent = currentProduct + " — Kişiye Özel Tasarla";
+    document.getElementById("designModal").classList.add("show");
+    document.getElementById("designModal").setAttribute("aria-hidden","false");
+    document.body.style.overflow = "hidden";
+    resetDesigner();
+  }
+
+  function closeDesigner(){
+    document.getElementById("designModal").classList.remove("show");
+    document.getElementById("designModal").setAttribute("aria-hidden","true");
+    document.body.style.overflow = "";
+  }
+
+  document.getElementById("designModal").addEventListener("click", function(e){
+    if(e.target === this) closeDesigner();
+  });
+
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") closeDesigner();
+  });
+
+  function loadDesignImage(e){
+    const file = e.target.files && e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev){
+      uploadedImage = ev.target.result;
+      const img = document.getElementById("designImage");
+      img.src = uploadedImage;
+      img.style.display = "block";
+      document.getElementById("printGuide").style.display = "none";
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function updateImageSize(){
+    const v = document.getElementById("imageSize").value;
+    document.getElementById("designImage").style.width = v + "%";
+    document.getElementById("sizeValue").textContent = v + "%";
+  }
+
+  function updateImagePosition(){
+    const x = document.getElementById("imageX").value;
+    const y = document.getElementById("imageY").value;
+    document.getElementById("designImage").style.left = x + "%";
+    document.getElementById("designImage").style.top = y + "%";
+    document.getElementById("xValue").textContent = "X " + x;
+    document.getElementById("yValue").textContent = "Y " + y;
+  }
+
+  function updateText(){
+    const text = document.getElementById("customText").value;
+    const el = document.getElementById("designText");
+    el.textContent = text;
+    el.style.display = text ? "block" : "none";
+    el.style.fontSize = document.getElementById("textSize").value + "px";
+    el.style.fontFamily = document.getElementById("textFont").value;
+    el.style.color = document.getElementById("textColor").value;
+    document.getElementById("textSizeValue").textContent = document.getElementById("textSize").value + "px";
+  }
+
+  function resetDesigner(){
+    document.getElementById("designFile").value = "";
+    uploadedImage = "";
+    const img = document.getElementById("designImage");
+    img.src = "";
+    img.style.display = "none";
+    document.getElementById("printGuide").style.display = "grid";
+    document.getElementById("imageSize").value = 48;
+    document.getElementById("imageX").value = 50;
+    document.getElementById("imageY").value = 50;
+    document.getElementById("customText").value = "";
+    document.getElementById("customerName").value = "";
+    document.getElementById("customerNote").value = "";
+    updateImageSize(); updateImagePosition(); updateText();
+  }
+
+  // Görseli önizleme içinde sürükleme
+  const dragTarget = document.getElementById("designImage");
+  dragTarget.addEventListener("pointerdown", function(e){
+    if(this.style.display === "none") return;
+    dragging = true;
+    this.setPointerCapture(e.pointerId);
+  });
+  dragTarget.addEventListener("pointermove", function(e){
+    if(!dragging) return;
+    const area = document.getElementById("printArea").getBoundingClientRect();
+    let x = ((e.clientX - area.left) / area.width) * 100;
+    let y = ((e.clientY - area.top) / area.height) * 100;
+    x = Math.max(10, Math.min(90, x)); y = Math.max(10, Math.min(90, y));
+    document.getElementById("imageX").value = Math.round(x);
+    document.getElementById("imageY").value = Math.round(y);
+    updateImagePosition();
+  });
+  dragTarget.addEventListener("pointerup", ()=>dragging=false);
+  dragTarget.addEventListener("pointercancel", ()=>dragging=false);
+
+  function saveDesign(){
+    const canvas = document.createElement("canvas");
+    const W = 1000, H = 1000;
+    canvas.width = W; canvas.height = H;
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#ffffff"; ctx.fillRect(0,0,W,H);
+    ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 4; ctx.strokeRect(45,45,W-90,H-90);
+
+    const img = document.getElementById("designImage");
+    const area = document.getElementById("printArea").getBoundingClientRect();
+    const sizePct = Number(document.getElementById("imageSize").value)/100;
+    const xPct = Number(document.getElementById("imageX").value)/100;
+    const yPct = Number(document.getElementById("imageY").value)/100;
+
+    const finish = ()=>{
+      const text = document.getElementById("customText").value.trim();
+      if(text){
+        ctx.fillStyle = document.getElementById("textColor").value;
+        ctx.font = "900 " + Math.round(Number(document.getElementById("textSize").value)*2) + "px " + document.getElementById("textFont").value;
+        ctx.textAlign = "center";
+        ctx.fillText(text, W*xPct, H*.78);
+      }
+      const a = document.createElement("a");
+      const safe = currentProduct.toLowerCase().replace(/[^a-z0-9ğüşöçıİĞÜŞÖÇ]+/gi,"-");
+      a.download = "shg-" + (safe || "tasarim") + "-tasarim.png";
+      a.href = canvas.toDataURL("image/png");
+      a.click();
+
+      const customer = document.getElementById("customerName").value.trim();
+      const note = document.getElementById("customerNote").value.trim();
+      const info = {
+        urun: currentProduct,
+        musteri: customer || "Belirtilmedi",
+        not: note || "Belirtilmedi",
+        baski_gorseli: "Yukarıdaki PNG dosyası",
+        tarih: new Date().toLocaleString("tr-TR")
+      };
+      const blob = new Blob([JSON.stringify(info,null,2)], {type:"application/json"});
+      const url = URL.createObjectURL(blob);
+      const b = document.createElement("a");
+      b.download = "shg-" + (safe || "tasarim") + "-siparis-bilgileri.json";
+      b.href = url; b.click();
+      setTimeout(()=>URL.revokeObjectURL(url),1000);
+    };
+
+    if(img.style.display !== "none" && img.complete && img.naturalWidth){
+      const iw = img.naturalWidth, ih = img.naturalHeight;
+      const maxW = W * sizePct, maxH = H * .70;
+      const scale = Math.min(maxW/iw, maxH/ih);
+      const dw = iw*scale, dh = ih*scale;
+      ctx.drawImage(img, W*xPct-dw/2, H*yPct-dh/2, dw, dh);
+      finish();
+    }else finish();
+  }
+
+</script>
+</body>
+</html>
